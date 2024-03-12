@@ -34,28 +34,31 @@ function App() {
   // Cambiando el estado de las variables
 const [count, setCount] = useState(0);
 // pasar parametros como componente reutilizable
-const user = {
+const users = [{
   name: 'Elvis',
   imageUrl:'https://hips.hearstapps.com/hmg-prod/images/singer-elvis-presley-news-photo-1590531497.jpg',
   imageSize:90,
-};
-
-// pasar parametros como componente reutilizable
-const user2 = {
+},
+{
   name: 'Brad Pitt',
   imageUrl:'https://goldenglobes.com/wp-content/uploads/2023/10/brad-pitt_03_paramount-pictures.jpg',
   imageSize:90,
-};
+},
+{
+  name: 'Madonna',
+  imageUrl:'https://indierocks.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/bfi_thumb/Ray_Of_Light-8n2vcxs4y78mb0xd3trppqm9x24twmnz6nx6do7a5x8g1fk15p7g2lhswqh2bk.jpg',
+  imageSize:90,
+}];
+
 
 
 
   return (
         <>
-          <Profile user = {user}/>
+        {users.map(user => (<Profile user = {user}/>))}
+          
           <br />
 
-          <Profile user = {user2}/>
-          <br />
           
           <button onClick={() => saludar()}>Enviar</button>
           <input type="text" onChange={mostrarTexto} />
