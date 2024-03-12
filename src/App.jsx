@@ -1,12 +1,7 @@
 import { useState } from 'react';
 import './App.css'
 
-function Profile(){
-  const user = {
-    name: 'Elvis',
-    imageUrl:'https://hips.hearstapps.com/hmg-prod/images/singer-elvis-presley-news-photo-1590531497.jpg',
-    imageSize:90,
-  };
+function Profile({user}){
 
   return (
     <>
@@ -38,11 +33,28 @@ function App() {
 
   // Cambiando el estado de las variables
 const [count, setCount] = useState(0);
+// pasar parametros como componente reutilizable
+const user = {
+  name: 'Elvis',
+  imageUrl:'https://hips.hearstapps.com/hmg-prod/images/singer-elvis-presley-news-photo-1590531497.jpg',
+  imageSize:90,
+};
+
+// pasar parametros como componente reutilizable
+const user2 = {
+  name: 'Brad Pitt',
+  imageUrl:'https://goldenglobes.com/wp-content/uploads/2023/10/brad-pitt_03_paramount-pictures.jpg',
+  imageSize:90,
+};
+
 
 
   return (
         <>
-          <Profile/>
+          <Profile user = {user}/>
+          <br />
+
+          <Profile user = {user2}/>
           <br />
           
           <button onClick={() => saludar()}>Enviar</button>
