@@ -9,14 +9,16 @@ import UserList from './components/user/UserList';
 function App() {
   return (
     <>
-      <Header />
+      
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path="/" element={<Example />} />
           <Route path="user" element={<UserList />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
-      <Footer />
+      
     </>
   );
 }
