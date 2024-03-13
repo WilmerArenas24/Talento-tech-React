@@ -25,7 +25,7 @@ export default function UserList() {
               }}
                   
                 src="https://es.rollingstone.com/wp-content/uploads/2022/06/Kit-Harrington-regresara-como-Jon-Snow-en-secuela-de-Game-of-Thrones.jpg"
-                alt="Avatar 1"
+                alt="Jhon snow"
               />
             </td>
           </tr>
@@ -42,7 +42,7 @@ export default function UserList() {
               }}
                   
                 src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/10/Daemon-Targaryen.jpg"
-                alt="Avatar 1"
+                alt="Daemon Targaryen"
               />
             </td>
           </tr>
