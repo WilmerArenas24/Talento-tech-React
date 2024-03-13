@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css'
+import Footer from './components/footer';
 
 function Profile({user}){
 
@@ -67,6 +68,7 @@ const users = [{
           <button onClick={() => setCount(count+1)}>Sumar</button>
           <button onClick={() => setCount(count-1)}>Restar</button>
           <p>El contador va en: {count}</p>
+          <Footer/>
           
 
         </>
