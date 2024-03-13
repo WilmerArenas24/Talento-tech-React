@@ -13,26 +13,36 @@ export default function UserList() {
   
         <tbody>
           <tr>
-            <td>Robert</td>
-            <td>Baratheon</td>
-            <td>robert@gmail.com</td>
+            <td>Jhon</td>
+            <td>Snow</td>
+            <td>jhonsnow@gmail.com</td>
             <td>123465</td>
             <td>
-              <img
-                src="URL_DE_TU_IMAGEN_1"
+              <img style={{
+                with:50,
+                height:50,
+                
+              }}
+                  
+                src="https://es.rollingstone.com/wp-content/uploads/2022/06/Kit-Harrington-regresara-como-Jon-Snow-en-secuela-de-Game-of-Thrones.jpg"
                 alt="Avatar 1"
               />
             </td>
           </tr>
           <tr>
-            <td>John</td>
-            <td>Snow</td>
-            <td>johnsnow@gmail.com</td>
+            <td>Daemon</td>
+            <td>Targaryen</td>
+            <td>principecanalla@gmail.com</td>
             <td>852467</td>
             <td>
-              <img
-                src="URL_DE_TU_IMAGEN_2"
-                alt="Avatar 2"
+            <img style={{
+                with:50,
+                height:50,
+                
+              }}
+                  
+                src="https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/10/Daemon-Targaryen.jpg"
+                alt="Avatar 1"
               />
             </td>
           </tr>
