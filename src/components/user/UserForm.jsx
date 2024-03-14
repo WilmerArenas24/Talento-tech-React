@@ -2,7 +2,7 @@ export default function Formulario(){
 
     return (
         <div className="max-w-md mx-auto px-5 py-5">
-            <form action="" className="bg-white shadow-md rounded px-8 pt-6 pb-8">
+            <form action="" className="bg-white rounded px-8 pt-6 pb-8 shadow-2xl">
 
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2">Name</label>
