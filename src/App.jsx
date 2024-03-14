@@ -5,6 +5,7 @@ import Footer from './components/footer';
 import Header from './components/header';
 import Example from './components/example';
 import UserList from './components/user/UserList';
+import UserForm from './components/user/UserForm';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Example />} />
           <Route path="user" element={<UserList />} />
+          <Route path="user-form" element={<UserForm />} />
         </Routes>
         <Footer />
       </BrowserRouter>
