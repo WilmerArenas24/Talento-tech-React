@@ -15,6 +15,12 @@ export default function Header() {
           </Link>
         </li>
       </ul>
+
+      {/* <div className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 px-5">
+      <Link to="/user" className="flex items-center justify-center hover:text-blue-500">
+        Usuarios
+      </Link>
+    </div> */}
     </nav>
   );
 }
