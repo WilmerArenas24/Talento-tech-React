@@ -1,4 +1,6 @@
-import { useState } from 'react';
+
+import { decreaseNumber, increaseNumber } from '../features/numberSlice';
+import {useSelector, useDispatch} from 'react-redux';
 
 function Profile({ user }) {
   return (
@@ -13,16 +15,29 @@ function Profile({ user }) {
   );
 }
 
+function ButtonExample() {
+  // const [count, setCount] = useState(0);
+  const number = useSelector(state => state.number.value);
+  const dispatch = useDispatch();
+
+  return (
+    <>
+      <div className="flex flex-col items-center">
+        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" 
+        onClick={() => dispatch(increaseNumber())}>
+          Sumar
+        </button>
+        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" 
+        onClick={() => dispatch(decreaseNumber())}>
+          Restar
+        </button>
+        <p>El contador va en: {number}</p>
+      </div>
+    </>
+  );
+}
+
 export default function Example() {
-  const saludar = () => {
-    alert('Hola mundo');
-  };
-
-  const mostrarTexto = (e) => {
-    console.log(e.target.value);
-  };
-
-  const [count, setCount] = useState(0);
   const users = [
     {
       name: 'Elvis',
@@ -47,22 +62,9 @@ export default function Example() {
           </div>
         ))}
       </div>
-
-      <div className="flex flex-col items-center">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={saludar}>
-          Enviar
-        </button>
-        <input className="border-2 border-gray-400 py-2 px-4 rounded mt-4" type="text" onChange={mostrarTexto} />
-        <br />
-
-        <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick={() => setCount(count + 1)}>
-          Sumar
-        </button>
-        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => setCount(count - 1)}>
-          Restar
-        </button>
-        <p>El contador va en: {count}</p>
-      </div>
+      <ButtonExample />
+      <ButtonExample />
+      <ButtonExample />
     </div>
   );
 }
