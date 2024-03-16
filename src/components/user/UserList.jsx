@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 export default function UserList() {
     
@@ -14,6 +15,7 @@ export default function UserList() {
                     <th scope="col" className="px-6 py-3">Email</th>
                     <th scope="col" className="px-6 py-3">Identification</th>
                     <th scope="col" className="px-6 py-3">Avatar</th>
+                    <th scope="col" className="px-6 py-3">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +30,19 @@ export default function UserList() {
                                 src={user.avatar}
                                 alt={user.name + ' ' + user.lastname}
                             />
+                        </td>
+
+                        <td className="border-y-2 px-4 py-2 border-indigo-600">
+                            <div className="flex items-center">
+                                <Link to={`/user/${user._id}`} 
+                                    className="inline-block px-4 py-2 mr-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-lg hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
+                                    Edit
+                                </Link>
+                                <button type="button" 
+                                    className="inline-block px-4 py-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-lg hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
+                                    Delete
+                                </button>
+                            </div>
                         </td>
                     </tr>
                 ))}
