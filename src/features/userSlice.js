@@ -6,7 +6,7 @@ const users = [
         "name": "JHON",
         "lastname": "DOE",
         "email": "johndoe11@example.com",
-        "password": "password1"
+        "avatar": "hdhdhdhdhdhshshahaggagaag"
       }
     
 ]
@@ -18,9 +18,7 @@ export const userSlice = createSlice({
         addUser: (state, action) =>{
             state.push(action.payload)
         }
-
     }
-
 })
 
 export const {addUser} = userSlice.actions
