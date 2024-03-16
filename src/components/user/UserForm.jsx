@@ -13,7 +13,7 @@ export default function UserForm(){
             name: e.target.name.value,
             lastname: e.target.lastname.value,
             email: e.target.email.value,
-            id: e.target.id.value, // Aquí deberías cambiar e.target.id.value a e.target.id.value
+            id: e.target.id.value, 
             password: e.target.password.value
         }
         dispatch(addUser(newUser))
