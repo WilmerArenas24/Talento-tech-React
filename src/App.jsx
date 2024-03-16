@@ -17,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Example />} />
           <Route path="user" element={<UserList />} />
-          <Route path="user-form" element={<UserForm />} />
+          <Route path="create-user" element={<UserForm />} />
           <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
