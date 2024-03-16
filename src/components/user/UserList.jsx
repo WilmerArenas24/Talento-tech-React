@@ -26,7 +26,7 @@ export default function UserList() {
                         <td scope="col" className="px-6 py-3">
                             <img className="w-40"
                                 src={user.avatar}
-                                alt={user.name + ' ' + user.LastName}
+                                alt={user.name + ' ' + user.lastname}
                             />
                         </td>
                     </tr>
