@@ -34,7 +34,8 @@ export default function UserList() {
 
                         <td className="border-y-2 px-4 py-2 border-indigo-600">
                             <div className="flex items-center">
-                                <Link to={`/user/${user._id}`} 
+                              // tener cuidado aquí, ya que se cambio _id por id ya que en el ejercicio no tengo ese _id
+                                <Link to={`/user/${user.id}`} 
                                     className="inline-block px-4 py-2 mr-2 text-sm font-medium text-gray-900 bg-transparent border border-gray-900 rounded-lg hover:bg-gray-900 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 focus:bg-gray-900 focus:text-white dark:border-white dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:bg-gray-700">
                                     Edit
                                 </Link>
