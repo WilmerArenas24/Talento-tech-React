@@ -1,11 +1,13 @@
 import { useDispatch } from "react-redux";
 import { addUser } from "../../features/userSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function UserForm(){
 
     const dispatch = useDispatch();
     const navigate = useNavigate(); // instanciamos la variable de useNavigate
+    const params = useParams();
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -19,6 +21,10 @@ export default function UserForm(){
         dispatch(addUser(newUser))
         navigate('/user') // hacemos la redireccion
     }
+
+    useEffect(()=>{
+        console.log(params.id)
+    })
 
     return (
         <div className="max-w-md mx-auto px-5 py-5">
