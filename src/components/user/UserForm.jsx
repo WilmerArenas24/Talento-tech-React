@@ -1,4 +1,11 @@
+import { useDispatch } from "react-redux";
+import { addUser } from "../../features/userSlice";
+import { useNavigate } from "react-router-dom";
+
 export default function UserForm(){
+
+    const dispatch = useDispatch();
+    const navigate = useNavigate(); // instanciamos la variable de useNavigate
 
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -6,11 +13,11 @@ export default function UserForm(){
             name: e.target.name.value,
             lastname: e.target.lastname.value,
             email: e.target.email.value,
-            id: e.target.id.value,
+            id: e.target.id.value, // Aquí deberías cambiar e.target.id.value a e.target.id.value
             password: e.target.password.value
         }
-
-        console.log(newUser)
+        dispatch(addUser(newUser))
+        navigate('/user') // hacemos la redireccion
     }
 
     return (
