@@ -1,10 +1,11 @@
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { useGetUsersQuery } from '../../features/api/apiSlice';
 
 export default function UserList() {
     
-    const users = useSelector(state => state.users);
-    console.log(users);
+    // const users = useSelector(state => state.users);
+    const {data: users, isLoading, isFecthing} = useGetUsersQuery();
+    console.log({data: users, isLoading, isFecthing});
 
     return (
         <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
