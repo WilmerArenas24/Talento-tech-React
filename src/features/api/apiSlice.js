@@ -5,8 +5,7 @@ export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://localhost:3000',
         prepareHeaders: (headers, {}) => {
-            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWU2NzYxNzA2NTU0MTE0ZjIyMTEzNzAiLCJlbWFpbCI6ImpvaG5kb2UxMUBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxMDk4MDk5NSwiZXhwIjoxNzEwOTg0NTk1fQ.3CUxhgOSK232uoDsy-4QGdwdNPBgE_UlDHCCQT3Sgyc"
-            // const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY0YmJhNzU1ZjczZDBiNWI2ZDY4MWIiLCJlbWFpbCI6Im1hcmlvQGNvcnJlbzEnLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxMTA2ODAyMywiZXhwIjoxNzExMDcxNjIzfQ.QwXbfRDXd1CBGTeqXhYjtCBWwlFZBYQru0sMIhOvGQs"
+            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY0YmJhNzU1ZjczZDBiNWI2ZDY4MWIiLCJlbWFpbCI6Im1hcmlvQGNvcnJlbzEnLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxMTA2ODAyMywiZXhwIjoxNzExMDcxNjIzfQ.QwXbfRDXd1CBGTeqXhYjtCBWwlFZBYQru0sMIhOvGQs"
             if(token){
                 headers.set('Authorization', `Bearer ${token}`);
             }
@@ -55,6 +54,13 @@ export const apiSlice = createApi({
                 body: body.file
             }),
             invalidatesTags: ["Users"]
+        }),
+        login: builder.mutation({
+            query: (body) => ({
+                url: 'login',
+                method: 'POST',
+                body: body
+            })
         })        
     })    
 })
@@ -66,5 +72,6 @@ export const { useGetUsersQuery,
                 useCreateUserMutation, 
                 useUpdateUserMutation,
                 useDeleteUserMutation,
-                useUploadAvatarMutation
+                useUploadAvatarMutation,
+                useLoginMutation
         } = apiSlice
