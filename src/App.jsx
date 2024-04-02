@@ -38,6 +38,9 @@ function App() {
           {/* Rutas de casas */}
           <Route path="/create-house" element={<PrivateRoute Component={HouseFormCreate} />} />
 
+          {/* Rutas de Chat */}
+          <Route path="/chat" element={<PrivateRoute Component={chat}/>}/>
+
           {/* Rutas Públicas */}
           <Route path="/create-user" element={<UserFormCreate />} />
           <Route path="/login" element={<Login />} />
