@@ -4,8 +4,8 @@ export const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://localhost:3000',
-        prepareHeaders: (headers, {}) => {
-            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWY0YmJhNzU1ZjczZDBiNWI2ZDY4MWIiLCJlbWFpbCI6Im1hcmlvQGNvcnJlbzEnLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcxMTA2ODAyMywiZXhwIjoxNzExMDcxNjIzfQ.QwXbfRDXd1CBGTeqXhYjtCBWwlFZBYQru0sMIhOvGQs"
+        prepareHeaders: (headers, {getState}) => {
+            const token = getState().auth.token
             if(token){
                 headers.set('Authorization', `Bearer ${token}`);
             }

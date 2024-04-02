@@ -1,23 +1,22 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-// crear el slice 
+/** Crear el Slice */
 const numberSlice = createSlice({
-    name: 'number', //nombre del slice
-    initialState:{ //estado inicial de la varible
+    name: 'number', // Nombre del Slice
+    initialState: { // Estado inicial de la variable
         value: 0
     },
     reducers: {
-
-        // funciones que cambiaran el estado de la variable
-        increaseNumber:(state)=>{
-            state.value += 1;
+        /** Funciones que cambiaran el estado de la variable */
+        increaseNumber: (state) => {
+            state.value +=1;
         },
-        decreaseNumber:(state)=>{
-            state.value -= 1;
+        decreaseNumber: (state) => {
+            state.value -=1;
         }
     }
 });
 
-// exportando dos funciones
-export const {increaseNumber, decreaseNumber} = numberSlice.actions;
+/** Exporto las 2 funciones */
+export const { increaseNumber, decreaseNumber } = numberSlice.actions;
 export default numberSlice.reducer;

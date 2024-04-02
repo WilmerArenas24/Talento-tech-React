@@ -21,29 +21,29 @@ function Profile({user}) {
     );
 }
 
-// function ButtonExample(){
+function ButtonExample(){
 
-//   /** El setState se usa para cambiar estados de variables */
-//   // const [count, setCount] = useState(0);
+  /** El setState se usa para cambiar estados de variables */
+  // const [count, setCount] = useState(0);
 
-//   /** Obtiene el valor del estado de la variable */
-//   const number = useSelector(state => state.number.value);
-//   /** Cambiar el valor del estado de la variable */
-//   const dispatch = useDispatch();
+  /** Obtiene el valor del estado de la variable */
+  const number = useSelector(state => state.number.value);
+  /** Cambiar el valor del estado de la variable */
+  const dispatch = useDispatch();
 
 
-//   return (
-//     <>
-//       <button className="bg-blue-500 hover:bg-blue-700 rounded
-//                          text-blue-50 font-bold py-2 px-4" 
-//               onClick={() => dispatch(increaseNumber())}>Sumar</button>
-//       <button className="bg-red-500 hover:bg-red-700 rounded
-//                          text-red-50 font-bold py-2 px-4" 
-//               onClick={() => dispatch(decreaseNumber())}>Restar</button>
-//       <p> El contador va en: {number}</p>
-//     </>
-//   );
-// }
+  return (
+    <>
+      <button className="bg-blue-500 hover:bg-blue-700 rounded
+                         text-blue-50 font-bold py-2 px-4" 
+              onClick={() => dispatch(increaseNumber())}>Sumar</button>
+      <button className="bg-red-500 hover:bg-red-700 rounded
+                         text-red-50 font-bold py-2 px-4" 
+              onClick={() => dispatch(decreaseNumber())}>Restar</button>
+      <p> El contador va en: {number}</p>
+    </>
+  );
+}
 
 export default function Example() {
 
@@ -90,10 +90,10 @@ export default function Example() {
         <br/>
         <button onClick={() => saludar()}>Enviar</button>    
         <input type="text" onChange={mostrarTexto} onKeyUp={keyUp} />  
-        {/* <br/>
+        <br/>
         <ButtonExample/>
         <ButtonExample/>
-        <ButtonExample/> */}
+        <ButtonExample/>
         
       </div>
     )
