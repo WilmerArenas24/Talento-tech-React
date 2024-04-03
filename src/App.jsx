@@ -13,7 +13,8 @@ import UserFormCreate from "./components/user/UserFormCreate";
 import UserFormEdit from "./components/user/UserFormEdit";
 import ChangePassword from "./components/auth/ChangePassword";
 import HouseFormCreate from "./components/house/HouseFormCreate";
-import { Chat } from "./features/chat/Chat";
+import Chat from "./features/chat/Chat"; // Importa el componente Chat sin llaves
+
 
 function App() {
   const dispatch = useDispatch();
