@@ -13,6 +13,7 @@ import UserFormCreate from "./components/user/UserFormCreate";
 import UserFormEdit from "./components/user/UserFormEdit";
 import ChangePassword from "./components/auth/ChangePassword";
 import HouseFormCreate from "./components/house/HouseFormCreate";
+import { Chat } from "./features/chat/Chat";
 
 function App() {
   const dispatch = useDispatch();
@@ -37,9 +38,8 @@ function App() {
 
           {/* Rutas de casas */}
           <Route path="/create-house" element={<PrivateRoute Component={HouseFormCreate} />} />
-
-          {/* Rutas de Chat */}
-          <Route path="/chat" element={<PrivateRoute Component={chat}/>}/>
+          {/* Rutas de chat */}
+          <Route path="/chat" element={<PrivateRoute Component={Chat} />} />
 
           {/* Rutas Públicas */}
           <Route path="/create-user" element={<UserFormCreate />} />
